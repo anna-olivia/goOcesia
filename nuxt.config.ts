@@ -1,13 +1,67 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  ssr: true, // serverseitiges Rendering für crawlbares HTML
+  app: {
+    head: {
+      htmlAttrs: { lang: "de" },
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+    },
+  },
   modules: [
-    '@nuxt/eslint',
-    '@nuxtjs/tailwindcss'
+    "@nuxt/eslint",
+    "@nuxtjs/tailwindcss",
+    "nuxt-schema-org",
+    "@dargmuesli/nuxt-cookie-control",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
   ],
   typescript: {
-    typeCheck: true
-  }, 
-  css: ['~/assets/css/tailwind.css']
-})
+    typeCheck: true,
+  },
+  css: ["~/assets/css/tailwind.css"],
+  runtimeConfig: {
+    public: {
+      siteUrl: "https://example.com",
+    },
+  },
+
+  schemaOrg: {
+    identity: {
+      type: "Organization",
+      name: "Example GmbH",
+      url: "https://example.com",
+      logo: "https://example.com/logo.png",
+    },
+  },
+
+  cookieControl: {
+    locales: ["de"],
+    cookies: {
+      necessary: [],
+      optional: [
+        {
+          id: "ga4",
+          name: { de: "Google Analytics" },
+          description: { de: "Nutzungsanalyse, anonymisiert." },
+          targetCookieIds: ["_ga", "_ga_*"],
+          src: "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX",
+          isPreselected: false,
+        },
+      ],
+    },
+  },
+  robots: {
+    disallow: ["/unterseite"],
+  },
+  site: {
+    url: "https://example.com",
+    name: "Example",
+  },
+  sitemap: {
+    autoLastmod: true,
+  },
+});
