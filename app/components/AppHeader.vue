@@ -45,8 +45,7 @@ const onLogin = () => {
         to="/"
         class="inline-block transition-transform hover:scale-105 will-change-transform"
       >
-        Logo Placeholder
-        <!-- <NuxtImg src="/logo.png" alt="logo" width="80" height="80" /> -->
+        <NuxtImg src="/logo.png" alt="logo" width="80" height="80" />
       </NuxtLink>
       <div class="flex items-center gap-3">
         <NuxtLink to="/#about" class="nav-link">

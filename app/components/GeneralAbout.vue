@@ -33,7 +33,7 @@
     <div>
       <h2>Would you like to learn more about me and my projects?</h2>
       <h3>Click here:</h3>
-      <!--  <SocialLinks /> -->
+      <SocialLinks />
     </div>
   </section>
 </template>

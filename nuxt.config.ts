@@ -18,11 +18,20 @@ export default defineNuxtConfig({
     "@dargmuesli/nuxt-cookie-control",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
+    "@nuxt/icon",
+    "@nuxt/image",
   ],
   typescript: {
     typeCheck: true,
   },
   css: ["~/assets/css/tailwind.css"],
+
+  icon: {
+    serverBundle: {
+      collections: ["uil", "mdi"],
+    },
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: "https://example.com",
@@ -55,7 +64,7 @@ export default defineNuxtConfig({
     },
   },
   robots: {
-    disallow: ["/unterseite"],
+    disallow: ["/map"],
   },
   site: {
     url: "https://example.com",
