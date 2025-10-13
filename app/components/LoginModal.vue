@@ -13,7 +13,11 @@ const password = ref("");
 
 const showLoginModal = useState("showLoginModal", () => false);
 
-const session = useCookie("session");
+const session = useCookie("session", {
+  maxAge: 60 * 60 * 24,
+  sameSite: "lax",
+  secure: process.env.NODE_ENV === "production",
+});
 
 const handleLogin = async (): Promise<void> => {
   try {

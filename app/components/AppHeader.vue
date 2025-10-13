@@ -1,9 +1,35 @@
 <script setup lang="ts">
+import { useRoute, useRouter } from "vue-router";
+import { useCookie } from "#app";
+import type { Ref, ComputedRef } from "vue";
+import { useLoginModal, useAuthModel } from "#imports";
+
 const { open, setReturnTo } = useLoginModal();
+const { isAuthenticated } = useAuthModel();
 const route = useRoute();
+const router = useRouter();
+
+const session: Ref<string | null> = useCookie("session");
+
 const onLogin = () => {
   setReturnTo(route.fullPath);
   open();
+};
+
+const goToPage = () => {
+  router.push("/map");
+};
+
+const isLoggedIn: ComputedRef<boolean> = computed(() => {
+  return isAuthenticated.value || !!session.value;
+});
+const buttonText: ComputedRef<string> = computed(() =>
+  isLoggedIn.value ? "See Map" : "Login"
+);
+
+const buttonAction = (): void => {
+  if (isLoggedIn.value) goToPage();
+  else onLogin();
 };
 </script>
 <template>
@@ -21,7 +47,9 @@ const onLogin = () => {
         <BasicButton as="link" to="/#about" variant="secondary"
           >About</BasicButton
         >
-        <BasicButton variant="primary" @click="onLogin">Login</BasicButton>
+        <BasicButton variant="primary" @click="buttonAction">
+          {{ buttonText }}
+        </BasicButton>
       </div>
     </nav>
   </header>

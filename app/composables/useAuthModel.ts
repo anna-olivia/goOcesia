@@ -1,4 +1,4 @@
-import type { Ref } from "vue";
+import type { Ref, ComputedRef } from "vue";
 import { useCookie } from "#app";
 
 interface User {
@@ -9,7 +9,10 @@ interface User {
 
 export const useAuthModel = () => {
   const user: Ref<User | null> = useState<User | null>("auth_user", () => null);
-  const isAuthenticated = computed(() => user.value !== null);
+
+  const isAuthenticated: ComputedRef<boolean> = computed(
+    () => user.value !== null
+  );
 
   const login = async (email: string, password: string): Promise<void> => {
     try {
@@ -19,7 +22,7 @@ export const useAuthModel = () => {
       });
       user.value = data;
       // Demo Cookie Session
-      const session = useCookie("session");
+      const session: Ref<string | null> = useCookie("session");
       session.value = JSON.stringify({
         id: data.id,
         email: data.email,
