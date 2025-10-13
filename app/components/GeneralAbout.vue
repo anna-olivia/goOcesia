@@ -18,12 +18,12 @@
     <p>
       Using visualizations to create a clear, calm approach to the big questions
       of our time, without pointing the moral finger. Protecting our environment
-      is something that concerns us all, but placing the burden solely on
-      individuals often provokes resistance—which is understandable when
-      everyday life is already dominated by more pressing concerns. That is why
-      responsibility is needed above all where structures are created: among
-      groups of people with real social influence, whose decisions improve or
-      worsen the balance of this world.
+      is something that concerns us all, but placing the burden just on
+      individuals often provokes resistance, which is understandable when
+      everyday life is already dominated by individual direct challenges. That
+      is why responsibility is needed above all where structures are created:
+      among groups of people with real social influence, whose decisions improve
+      or worsen the balance of the world.
     </p>
     <p>
       Hopefully, this relatively simple data visualization will not only serve

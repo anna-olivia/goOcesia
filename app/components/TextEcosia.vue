@@ -21,10 +21,10 @@
       a little with TypeScript and I'm still not quite sure if types were
       actually the problem. Additionally I had problems with some dependencies
       and their compabilities, especially Eslint - what made me decide not to
-      install it (which of course made me more clean up work than necessary).
-      All in all I was focused to the bigger picture, which was for me in this
-      case to show you an interactive UI with meaningful but minimalistic
-      content and overall was a great learning & coding journey to me.
+      reset everything and start over from blank. All in all I was focused to
+      the bigger picture, which was for me in this case to show you an
+      interactive UI with meaningful but minimalistic content and overall was a
+      great learning & coding journey to me.
     </p>
     <p class="text-lg text-gray-600">
       Unfortunately the visualization of the content isn't too strikening as I
@@ -34,14 +34,14 @@
       for code and combine it with my core values. That's why I can genuinly
       say, that your main technical product is outstanding: it gives everyone
       the opportunity to do something for good without having barriers. There
-      are a lot of reasons why people can't always chose to do something for
+      are a lot of reasons why people can't always choose to do something for
       their environment there live in - next to structual problems in society I
       am not a big fan of moralize individuals. So for me your search engine is
       a perfect example how a technical tool can empower people to engage in
       sustainable projects without excluding people or jugde.
     </p>
     <p class="text-lg text-gray-600">
-      I would be really very proud to contribute to such a great misson.
+      I would be really proud to contribute to such a great misson.
     </p>
     <div class="text-lg text-gray-600">
       <h2>If you want to know more about me and my projects</h2>

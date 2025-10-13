@@ -9,9 +9,10 @@ export default defineNuxtConfig({
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "title", content: "Ocesia - global temperatures on one click" },
-        { name: "description", content: "Interactive Worldmap with timeline" },
+        { name: "description", content: "Interactive worldmap with timeline" },
         { name: "author", content: "Anna-Olivia Lebert-Wietholtz" },
       ],
+      link: [{ rel: "icon", type: "image/png", href: "favicon.ico" }],
     },
   },
   modules: [
@@ -42,16 +43,17 @@ export default defineNuxtConfig({
     ecoUserPassword: process.env.NUXT_ECO_USER_PASSWORD,
 
     public: {
-      siteUrl: "https://example.com",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
+      siteName: "Ocesia",
     },
   },
 
   schemaOrg: {
     identity: {
       type: "Organization",
-      name: "Example GmbH",
-      url: "https://example.com",
-      logo: "https://example.com/logo.png",
+      name: "Ocesia",
+      url: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
+      logo: "/logo.png",
     },
   },
 
@@ -73,12 +75,17 @@ export default defineNuxtConfig({
   },
   robots: {
     disallow: ["/map"],
+    sitemap: `$process.en.NUXT_PUBLIC_SITE_URL || "http://localhost:3000"}/sitemap.xml`,
   },
   site: {
-    url: "https://example.com",
-    name: "Example",
+    url: "https://ocesia.vercel.app/",
+    name: "Ocesia",
   },
   sitemap: {
     autoLastmod: true,
+    defaults: {
+      changefreq: "weekly",
+      priority: 0.8,
+    },
   },
 });
