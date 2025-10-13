@@ -33,11 +33,13 @@ const { data: countriesData, status: countriesStatus } = await useAsyncData(
   "countries-110m",
   async () => {
     const world = await import("world-atlas/countries-110m.json");
+
     const topology: Record<string, unknown> =
       (world as { default?: Record<string, unknown> }).default || world;
 
     const topo =
       topology as unknown as import("topojson-specification").Topology;
+
     const countriesObj = topo.objects && topo.objects.countries;
     if (!countriesObj) {
       throw new Error("Topology does not contain 'countries' object");
@@ -155,11 +157,20 @@ const onCloseCard = () => {
   <div class="relative container mx-auto" @mousemove="onMouseMove">
     <!-- Zeitstrahl (gesteuert in der Card) -->
     <div class="m-4">
-      <div
-        id="badge"
-        class="text-xs font-inter mt-1 text-white font-bold bg-orange-400 p-1 w-14 text-center rounded"
-      >
-        {{ year }}
+      <div class="flex justify-between">
+        <div
+          id="badge"
+          class="text-xs font-inter mt-1 text-white font-bold bg-orange-400 p-2 w-14 text-center align-middle rounded"
+        >
+          {{ year }}
+        </div>
+        <div>
+          <span>Slide me!</span>
+          <Icon
+            name="cil:arrow-circle-bottom"
+            class="text-orange-400 text-3xl font-bold animate-bounce"
+          />
+        </div>
       </div>
       <input
         v-model.number="year"
@@ -167,8 +178,9 @@ const onCloseCard = () => {
         :min="ticks[0]"
         :max="ticks[ticks.length - 1]"
         step="5"
-        class="w-full accent-emerald-500"
+        class="w-full accent-emerald-500 cursor-pointer"
       />
+
       <!-- v-model.number damit nicht string entsteht weil inpute range also ein html inpur werte als strings zurückgeben - eventuell noch computed ablleiten -->
     </div>
     <!-- Overlay-Spinner Länder -->
@@ -194,7 +206,7 @@ const onCloseCard = () => {
           v-for="f in countries.features"
           :key="(f.id as any) || f.properties?.name"
           :d="pathGen(f as any) || ''"
-          class="fill-zinc-200 stroke-white hover:fill-emerald-300 transition"
+          class="fill-zinc-200 stroke-white hover:fill-emerald-300 transition cursor-pointer"
           :class="[(hoveredId === ((f.id as any) || f.properties?.name)) ? 'fill-emerald-300' : '']"
           @mouseenter="onEnter(f as any)"
           @mouseleave="onLeave"

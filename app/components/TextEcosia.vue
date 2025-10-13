@@ -28,17 +28,17 @@
     </p>
     <p class="text-lg text-gray-600">
       Unfortunately the visualization of the content isn't too strikening as I
-      was expecting while working with data which have the potenzial to show our
+      was expecting while working with data which have the potential to show our
       global warming crisis (compared to what I wrote in the About Section ;P ).
       But nevertheless I am really motivated to do something out of my passion
       for code and combine it with my core values. That's why I can genuinly
       say, that your main technical product is outstanding: it gives everyone
       the opportunity to do something for good without having barriers. There
       are a lot of reasons why people can't always choose to do something for
-      their environment there live in - next to structual problems in society I
-      am not a big fan of moralize individuals. So for me your search engine is
-      a perfect example how a technical tool can empower people to engage in
-      sustainable projects without excluding people or jugde.
+      the environment they live in - next to structual problems in society I am
+      not a big fan moralizing individuals. So for me your search engine is a
+      perfect example how a technical tool can empower people to engage in
+      sustainable projects without excluding or jugding people.
     </p>
     <p class="text-lg text-gray-600">
       I would be really proud to contribute to such a great misson.

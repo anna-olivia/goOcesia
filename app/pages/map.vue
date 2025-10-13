@@ -34,6 +34,13 @@ const loggedIn: ComputedRef<boolean> = computed(() => Boolean(session.value));
           <NuxtLink to="#ecosia" class="nav-link">
             <BasicButton variant="secondary">Read more ...</BasicButton>
           </NuxtLink>
+          <p>
+            But for now
+            <span class="text-orange-400">click</span>,
+            <span class="text-orange-400">hover</span> over the map and
+            <span class="text-orange-400">use the slider</span>
+            to travel in time.
+          </p>
         </div>
       </section>
       <WorldMap />
