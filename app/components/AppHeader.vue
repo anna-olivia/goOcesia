@@ -4,6 +4,15 @@ import { useCookie } from "#app";
 import type { Ref, ComputedRef } from "vue";
 import { useLoginModal, useAuthModel } from "#imports";
 
+const props = withDefaults(
+  defineProps<{
+    showLoginButton?: boolean;
+  }>(),
+  {
+    showLoginButton: true,
+  }
+);
+
 const { open, setReturnTo } = useLoginModal();
 const { isAuthenticated } = useAuthModel();
 const route = useRoute();
@@ -47,7 +56,11 @@ const buttonAction = (): void => {
         <BasicButton as="link" to="/#about" variant="secondary"
           >About</BasicButton
         >
-        <BasicButton variant="primary" @click="buttonAction">
+        <BasicButton
+          v-if="props.showLoginButton"
+          variant="primary"
+          @click="buttonAction"
+        >
           {{ buttonText }}
         </BasicButton>
       </div>

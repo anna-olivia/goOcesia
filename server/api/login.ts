@@ -7,7 +7,7 @@ const config = useRuntimeConfig();
 
 interface DemoUser {
   id: number;
-  name: string;
+  username: string;
   email: string;
   password: string;
 }
@@ -16,13 +16,13 @@ interface DemoUser {
 const demoUsers: DemoUser[] = [
   {
     id: 1,
-    name: "Anna",
+    username: "Anna",
     email: config.demoUserEmail,
     password: config.demoUserPassword,
   },
   {
     id: 2,
-    name: "Ecosia",
+    username: "Ecosia",
     email: String(config.ecoUserEmail || ""),
     password: String(config.ecoUserPassword || ""),
   },
