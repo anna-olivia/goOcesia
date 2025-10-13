@@ -10,6 +10,7 @@ useHead({
   <section>
     <div v-if="loggedIn">
       <h1>Private Subpage</h1>
+      <p>Hallo</p>
     </div>
     <div v-else aria-hidden="true" />
   </section>

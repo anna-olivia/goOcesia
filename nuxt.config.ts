@@ -33,6 +33,11 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    demoUserEmail: process.env.NUXT_DEMO_USER_EMAIL,
+    demoUserPassword: process.env.NUXT_DEMO_USER_PASSWORD,
+    ecoUserEmail: process.env.NUXT_ECO_USER_EMAIL,
+    ecoUserPassword: process.env.NUXT_ECO_USER_PASSWORD,
+
     public: {
       siteUrl: "https://example.com",
     },
