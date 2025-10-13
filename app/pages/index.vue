@@ -8,8 +8,13 @@ useSchemaOrg(seoPage("Landing", "Welcome"));
   <section
     class="container mx-auto grid gap-10 px-4 py-20 text-center text-lg text-gray-600"
   >
-    <h1 class="text-black text-4xl font-bold tracking-tight">Willkommen</h1>
-    <p>irgendwas</p>
+    <h1 class="text-black text-4xl font-bold tracking-tight">
+      Global Temperatures just one click away
+    </h1>
+    <p class="text-lg text-gray-600">
+      An interactive map with time slider to explore temperature changes in
+      world capitals.
+    </p>
 
     <figure class="mx-auto">
       <NuxtPicture src="/hero.png" alt="Hero Bild" />

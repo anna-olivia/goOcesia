@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: "de" },
       meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "title", content: "Ocesia - global temperatures on one click" },
+        { name: "description", content: "Interactive Worldmap with timeline" },
+        { name: "author", content: "Anna-Olivia Lebert-Wietholtz" },
       ],
     },
   },
