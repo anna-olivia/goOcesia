@@ -148,13 +148,15 @@ watch(
             Jahr: <span class="text-orange-400">{{ year }}</span>
           </div>
           <div class="font-medium">
-            Temperatur (15.07.):
+            Temperatur (15.07.*):
             <span class="text-orange-400"
               >{{ temp === null ? "–" : Math.round(temp) + " °C" }}
             </span>
           </div>
           <div v-if="season" class="font-medium">
             Saison: <span class="text-orange-400"> {{ season }} </span>
+            <br />
+            <small>*fixed day for comparative reference</small>
           </div>
         </div>
         <div v-else>Keine Daten verfügbar.</div>
