@@ -29,15 +29,15 @@ const loggedIn: ComputedRef<boolean> = computed(() => Boolean(session.value));
             Stack.
             <br />
             If you want to know more about my motivation and experience during
-            the coding process, just click the button ; )
+            the coding process, just click
+            <NuxtLink to="#ecosia" class="nav-link">
+              <BasicButton variant="secondary">Read more ...</BasicButton>
+            </NuxtLink>
           </p>
-          <NuxtLink to="#ecosia" class="nav-link">
-            <BasicButton variant="secondary">Read more ...</BasicButton>
-          </NuxtLink>
+
           <p>
-            But for now
-            <span class="text-orange-400">click</span>,
-            <span class="text-orange-400">hover</span> over the map and
+            But for now <span class="text-orange-400">hover</span> over,
+            <span class="text-orange-400">click</span> on the map and
             <span class="text-orange-400">use the slider</span>
             to travel in time.
           </p>

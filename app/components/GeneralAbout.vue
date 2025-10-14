@@ -20,10 +20,9 @@
       of our time, without pointing the moral finger. Protecting our environment
       is something that concerns us all, but placing the burden just on
       individuals often provokes resistance, which is understandable when
-      everyday life is already dominated by individual direct challenges. That
-      is why responsibility is needed above all where structures are created:
-      among groups of people with real social influence, whose decisions improve
-      or worsen the balance of the world.
+      everyday life is already dominated by individual direct challenges. Still
+      I believe we as individuals, groups or civil-society actors can empower
+      ourself and shape our future for good.
     </p>
     <p>
       Hopefully, this relatively simple data visualization will not only serve
