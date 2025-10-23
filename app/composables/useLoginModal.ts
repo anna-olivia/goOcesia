@@ -1,3 +1,4 @@
+// globaler State
 export const useLoginModal = () => {
   const show = useState<boolean>("showLoginModal", () => false);
 

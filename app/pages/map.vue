@@ -3,6 +3,7 @@ import type { Ref, ComputedRef } from "vue";
 import TextEcosia from "~/components/TextEcosia.vue";
 
 definePageMeta({ middleware: "auth-client" });
+//prüft automatisch ob user authentifiziert also eingeloggt
 
 useHead({
   meta: [{ name: "robots", content: "noindex, nofollow" }],

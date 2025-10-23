@@ -37,6 +37,7 @@ const onLeave = () => {
       </div>
     </div>
     <NuxtLink to="/map" class="relative mx-auto" @mousemove="onMouseMove">
+      <!-- nuxtlink prüft ob navigieren erlaubt und lädt alle guards und middleware also auth.client.ts hier dann globale states prüfen ob user eingeloggt falls nicht wird in auth.client.ts !loggedIn getriggert -->
       <NuxtPicture src="/hero_v2.png" alt="Hero Bild" @mouseleave="onLeave" />
       <div
         v-if="tooltip"

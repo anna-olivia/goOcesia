@@ -12,6 +12,7 @@ const email = ref("");
 const password = ref("");
 
 const showLoginModal = useState("showLoginModal", () => false);
+//useState global = einmal showLoginModal aufgerufen dann teilen alle Komponenten den State- ref() lokal - eigener state also unabhängig
 
 const session = useCookie("session", {
   maxAge: 60 * 60 * 24,
@@ -29,8 +30,10 @@ const handleLogin = async (): Promise<void> => {
     });
 
     showLoginModal.value = false;
+    //oder einfach closeModal()
     emit("close");
     router.push("/map");
+    //besser await navigateTo(returnTo.value || "/map")
   } catch (err) {
     console.error("Login failed", err);
     alert("Login failed. Check your entries");
